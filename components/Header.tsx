@@ -36,15 +36,16 @@ const StyledButton = styled(Button)`
   letter-spacing: 1px;
   padding: 12px 24px;
   transition: all 0.2s ease-in-out;
+
   &:hover {
     color: ${darkTheme.primaryColor04};
-    background-color: transparent;
   }
+
   &:focus {
     color: ${darkTheme.primaryColor04};
-    background-color: transparent;
   }
 `;
+
 const Header = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
