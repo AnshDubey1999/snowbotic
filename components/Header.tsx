@@ -16,9 +16,35 @@ import {
   MenuItem,
 } from "@mui/material";
 
+import { darkTheme } from "../theme/themes";
+
+import styled from "@emotion/styled";
+
 const pages = ["Home", "Products", "News and Updates", "About us", "Contact"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
+const StyledAppBar = styled(AppBar)`
+  background-color: ${darkTheme.backgroundColor};
+`;
+
+const StyledButton = styled(Button)`
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  margin-right: 10px;
+  text-transform: none;
+  letter-spacing: 1px;
+  padding: 12px 24px;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    color: ${darkTheme.primaryColor04};
+    background-color: transparent;
+  }
+  &:focus {
+    color: ${darkTheme.primaryColor04};
+    background-color: transparent;
+  }
+`;
 const Header = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
@@ -43,7 +69,7 @@ const Header = () => {
   };
 
   return (
-    <AppBar position="static">
+    <StyledAppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
@@ -127,13 +153,13 @@ const Header = () => {
             }}
           >
             {pages.map((page) => (
-              <Button
+              <StyledButton
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
                 {page}
-              </Button>
+              </StyledButton>
             ))}
           </Box>
 
@@ -168,7 +194,7 @@ const Header = () => {
           </Box>
         </Toolbar>
       </Container>
-    </AppBar>
+    </StyledAppBar>
   );
 };
 export { Header };
