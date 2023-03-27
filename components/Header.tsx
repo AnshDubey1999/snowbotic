@@ -19,26 +19,40 @@ import {
 import { darkTheme } from "../theme/themes";
 
 import styled from "@emotion/styled";
+import Image from "next/image";
 
 const pages = ["Home", "Products", "News and Updates", "About us", "Contact"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const StyledAppBar = styled(AppBar)`
   background-color: ${darkTheme.backgroundColor};
+  box-shadow: none;
 `;
 
 const StyledButton = styled(Button)`
   color: #ffffff;
   font-size: 16px;
   font-weight: 500;
-  margin-right: 10px;
   text-transform: none;
   letter-spacing: 1px;
-  padding: 12px 24px;
+  padding: 18px;
   transition: all 0.2s ease-in-out;
 
+  ::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: ${darkTheme.primaryColor04};
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+  }
+
   &:hover {
-    color: ${darkTheme.primaryColor04};
+    background-color: transparent;
+    ::after {
+      width: 100%;
+    }
   }
 
   &:focus {
@@ -73,7 +87,15 @@ const Header = () => {
     <StyledAppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+          <Image
+            src="/images/logo-snowbots.png"
+            height={75}
+            width={130}
+            alt="Snowbots"
+            style={{
+              marginRight: -20,
+            }}
+          />
           <Typography
             variant="h6"
             noWrap
@@ -84,12 +106,12 @@ const Header = () => {
               display: { xs: "none", md: "flex" },
               fontFamily: "monospace",
               fontWeight: 700,
-              letterSpacing: ".3rem",
+              letterSpacing: ".1rem",
               color: "inherit",
               textDecoration: "none",
             }}
           >
-            LOGO
+            SNOWBOTS
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -128,7 +150,6 @@ const Header = () => {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap
@@ -138,14 +159,13 @@ const Header = () => {
               mr: 2,
               display: { xs: "flex", md: "none" },
               flexGrow: 1,
-              fontFamily: "monospace",
               fontWeight: 700,
               letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none",
             }}
           >
-            LOGO
+            Snowbots
           </Typography>
           <Box
             sx={{
