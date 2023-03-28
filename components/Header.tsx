@@ -21,11 +21,11 @@ import { darkTheme } from "../theme/themes";
 import styled from "@emotion/styled";
 import Image from "next/image";
 
-const pages = ["Home", "Products", "News and Updates", "About us", "Contact"];
+const pages = ["Home", "Products", "Contact", "About us"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const StyledAppBar = styled(AppBar)`
-  background-color: ${darkTheme.backgroundColor};
+  background-color: ${darkTheme.backgroundColor02};
   box-shadow: none;
 `;
 
@@ -58,6 +58,29 @@ const StyledButton = styled(Button)`
   &:focus {
     color: ${darkTheme.primaryColor04};
   }
+`;
+
+const LoginButton = styled(Button)`
+  color: ${darkTheme.primaryColor};
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 1px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: transparent;
+  }
+`;
+
+const GetStartedButton = styled(Button)`
+  color: ${darkTheme.fontColor};
+  background-color: ${darkTheme.primaryColor04};
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 1px;
+  transition: all 0.2s ease-in-out;
 `;
 
 const Header = () => {
@@ -185,33 +208,22 @@ const Header = () => {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: "45px" }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
+            <LoginButton
+              variant="outlined"
+              size="large"
+              sx={{ my: 2, display: "block" }}
             >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
+              Login
+            </LoginButton>
+          </Box>
+          <Box sx={{ flexGrow: 0 }}>
+            <GetStartedButton
+              variant="contained"
+              size="large"
+              sx={{ my: 2, display: "block", ml: 3 }}
+            >
+              Get Started
+            </GetStartedButton>
           </Box>
         </Toolbar>
       </Container>
