@@ -18,15 +18,15 @@ const InfoContainer = styled("div")`
   flex-direction: column;
   justify-content: space-around;
   width: calc(100vw - 500px);
-  text-align: center;
-  align-items: center;
+  text-align: left;
+  align-items: left;
 `;
 
 const StyledParagh = styled("p")`
   font-size: 1.2rem;
   line-height: 1.5;
   margin-bottom: 2rem;
-  text-align: center;
+  text-align: left;
   text-justify: inter-word;
   margin-top: 20px;
 `;
@@ -80,6 +80,70 @@ const CustomSubtitle = styled("p")`
   color: #949494;
 `;
 
+const ExploreProductsButtonDiv = styled("div")`
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+`;
+
+const ExploreProductsButton = styled(Button)`
+  display: inline-block;
+  position: relative;
+  z-index: 0;
+  whitespace: no-wrap;
+  color: ${darkTheme.primaryColor};
+  font-family: "Open Sans";
+  width: 300px;
+  height: 50px;
+
+  ::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    z-index: -1;
+    filter: blur(4px);
+    width: calc(100% + 3px);
+    height: calc(100% + 3px);
+    opacity: 1;
+    background-image: linear-gradient(
+      45deg,
+      rgb(255, 0, 0),
+      rgb(255, 115, 0),
+      rgb(255, 251, 0),
+      rgb(72, 255, 0),
+      rgb(0, 255, 213),
+      rgb(0, 43, 255),
+      rgb(122, 0, 255),
+      rgb(255, 0, 200),
+      rgb(255, 0, 0)
+    );
+    animation: coolgradient 10s linear 0s infinite normal;
+    transition: opacity 0.3s ease-in-out 0s;
+
+    @keyframes coolgradient {
+      from {
+        background-position: -250px 0;
+      }
+      to {
+        background-position: 250px 0;
+      }
+    }
+  }
+
+  ::after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(17, 17, 17);
+    left: 0px;
+    top: 0px;
+  }
+`;
+
 export default function Home() {
   return (
     <div className={styles.mainContainer}>
@@ -98,6 +162,9 @@ export default function Home() {
           <CustomSubtitle>
             No installations. Comes prepackaged with all features and more!
           </CustomSubtitle>
+          <ExploreProductsButtonDiv>
+            <ExploreProductsButton>Explore Products</ExploreProductsButton>
+          </ExploreProductsButtonDiv>
         </LandingDiv>
         <footer className={styles.footer}>
           <a
