@@ -119,7 +119,7 @@ const ExploreProductsButton = styled(Button)`
       rgb(255, 0, 200),
       rgb(255, 0, 0)
     );
-    animation: coolgradient 10s linear 0s infinite normal;
+    animation: coolgradient 10s linear 0s infinite alternate;
     transition: opacity 0.3s ease-in-out 0s;
 
     @keyframes coolgradient {
