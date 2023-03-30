@@ -1,12 +1,14 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/LandingPage/Home.module.css";
-import { Header } from "../components/LandingPage/Header";
 import styled from "@emotion/styled";
 import { darkTheme } from "../theme/themes";
 import { TypeAnimation } from "react-type-animation";
 import { Button } from "@mui/material";
 import { Values } from "../components/LandingPage/Values";
+
+import { Header } from "../components/LandingPage/Header";
+import { Products } from "../components/LandingPage/Products";
 
 const ImageAndInfoDiv = styled("div")`
   display: flex;
@@ -63,7 +65,7 @@ const LandingDiv = styled("div")`
   display: flex;
   flex: 1;
   background-color: ${darkTheme.backgroundColor02};
-  justify-content: flex-start;
+  justify-content: center;
   text-align: center;
   flex-direction: column;
   align-items: center;
@@ -210,6 +212,7 @@ export default function Home() {
         </ImageAndInfoDiv>
       </main>
       <Values />
+      <Products />
       <footer className={styles.footer}>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
