@@ -26,7 +26,7 @@ const InfoContainer = styled("div")`
 `;
 
 const StyledParagh = styled("p")`
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 2rem;
   text-align: left;
@@ -170,8 +170,8 @@ export default function Home() {
       <main className={styles.main}>
         <ImageAndInfoDiv>
           <SnowRobotImage
-            src="/images/snowPlougherBackground.png"
-            height={400}
+            src="/images/products/snowrobot.png"
+            height={220}
             width={400}
             alt="Snow Plougher"
             style={{}}
@@ -201,11 +201,7 @@ export default function Home() {
               solution for clearing snow from driveways, sidewalks, and other
               outdoor areas. Our robot is equipped with powerful brushes and a
               durable snow blower that can quickly and efficiently clear snow,
-              even in the harshest winter conditions. With advanced sensors and
-              smart navigation technology, our robot can navigate around
-              obstacles and map out the most efficient snow clearing route. Say
-              goodbye to backbreaking snow shoveling and let our snow clearing
-              robot do the work for you!
+              even in the harshest winter conditions.
             </StyledParagh>
             <BuyNowButton variant="outlined">Buy now</BuyNowButton>
           </InfoContainer>
