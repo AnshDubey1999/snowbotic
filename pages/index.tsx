@@ -6,6 +6,7 @@ import styled from "@emotion/styled";
 import { darkTheme } from "../theme/themes";
 import { TypeAnimation } from "react-type-animation";
 import { Button } from "@mui/material";
+import { Values } from "../components/LandingPage/Values";
 
 const ImageAndInfoDiv = styled("div")`
   display: flex;
@@ -208,6 +209,7 @@ export default function Home() {
           </InfoContainer>
         </ImageAndInfoDiv>
       </main>
+      <Values />
       <footer className={styles.footer}>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"

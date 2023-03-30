@@ -130,3 +130,15 @@
     flex-direction: column;
   }
 }
+
+
+/* Values Component */
+.valuesContainer {
+  display: flex;
+  height: 60vh;
+  width: 100vw;
+  flex: 1;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
