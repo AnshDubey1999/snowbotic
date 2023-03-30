@@ -16,7 +16,7 @@ import {
   MenuItem,
 } from "@mui/material";
 
-import { darkTheme } from "../theme/themes";
+import { darkTheme } from "../../theme/themes";
 
 import styled from "@emotion/styled";
 import Image from "next/image";

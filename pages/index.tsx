@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
-import { Header } from "../components/Header";
+import styles from "../styles/LandingPage/Home.module.css";
+import { Header } from "../components/LandingPage/Header";
 import styled from "@emotion/styled";
 import { darkTheme } from "../theme/themes";
 import { TypeAnimation } from "react-type-animation";
@@ -109,15 +109,12 @@ const ExploreProductsButton = styled(Button)`
     opacity: 1;
     background-image: linear-gradient(
       45deg,
-      rgb(255, 0, 0),
-      rgb(255, 115, 0),
-      rgb(255, 251, 0),
-      rgb(72, 255, 0),
-      rgb(0, 255, 213),
-      rgb(0, 43, 255),
-      rgb(122, 0, 255),
-      rgb(255, 0, 200),
-      rgb(255, 0, 0)
+      #ffffff,
+      ${darkTheme.primaryColor},
+      ${darkTheme.primaryColor02},
+      ${darkTheme.primaryColor03},
+      ${darkTheme.primaryColor04},
+      ${darkTheme.primaryColor05}
     );
     animation: coolgradient 10s linear 0s infinite alternate;
     transition: opacity 0.3s ease-in-out 0s;
@@ -166,23 +163,6 @@ export default function Home() {
             <ExploreProductsButton>Explore Products</ExploreProductsButton>
           </ExploreProductsButtonDiv>
         </LandingDiv>
-        <footer className={styles.footer}>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Powered by{" "}
-            <span className={styles.logo}>
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                width={72}
-                height={16}
-              />
-            </span>
-          </a>
-        </footer>
       </div>
       <main className={styles.main}>
         <ImageAndInfoDiv>
@@ -228,6 +208,18 @@ export default function Home() {
           </InfoContainer>
         </ImageAndInfoDiv>
       </main>
+      <footer className={styles.footer}>
+        <a
+          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Powered by{" "}
+          <span className={styles.logo}>
+            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+          </span>
+        </a>
+      </footer>
     </div>
   );
 }
