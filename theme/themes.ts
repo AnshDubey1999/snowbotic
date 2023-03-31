@@ -11,5 +11,10 @@ export const darkTheme = {
     primaryColor04: '#00B8D9',
     primaryColor05: '#00A3BF',
     fontColor: '#F0F0F0',
-    hoverColor: '#808482'
+    hoverColor: '#808482',
 }
+
+export const font = {
+    fontFamily: "Open Sans",
+    spacing: "200px",
+};

@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { Adb as AdbIcon, Menu as MenuIcon } from "@mui/icons-material";
+import { Menu as MenuIcon } from "@mui/icons-material";
 
 import {
   AppBar,
@@ -22,7 +22,6 @@ import styled from "@emotion/styled";
 import Image from "next/image";
 
 const pages = ["Home", "Products", "Contact", "About us"];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const StyledAppBar = styled(AppBar)`
   background-color: ${darkTheme.backgroundColor};
@@ -31,7 +30,7 @@ const StyledAppBar = styled(AppBar)`
 
 const StyledButton = styled(Button)`
   color: #ffffff;
-  font-size: 16px;
+  font-size: 1vw;
   font-weight: 500;
   text-transform: none;
   letter-spacing: 1px;
@@ -62,7 +61,7 @@ const StyledButton = styled(Button)`
 
 const LoginButton = styled(Button)`
   color: ${darkTheme.primaryColor};
-  font-size: 16px;
+  font-size: 1vw;
   font-weight: 500;
   text-transform: none;
   letter-spacing: 1px;
@@ -76,7 +75,7 @@ const LoginButton = styled(Button)`
 const GetStartedButton = styled(Button)`
   color: ${darkTheme.fontColor};
   background-color: ${darkTheme.primaryColor04};
-  font-size: 16px;
+  font-size: 1vw;
   font-weight: 500;
   text-transform: none;
   letter-spacing: 1px;
@@ -126,11 +125,12 @@ const Header = () => {
             href="/"
             sx={{
               mr: 2,
+              fontSize: "1.3vw",
               display: { xs: "none", md: "flex" },
               fontFamily: "monospace",
               fontWeight: 700,
               letterSpacing: ".1rem",
-              color: "inherit",
+              color: darkTheme.primaryColor04,
               textDecoration: "none",
             }}
           >

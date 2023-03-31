@@ -6,7 +6,7 @@ import { darkTheme } from "../../theme/themes";
 
 const StyledCard = styled(Card)`
   background-color: ${darkTheme.primaryColor03};
-  margin: 0px 1.2rem;
+  margin: 3vh 3vw;
   transition: all 0.3s ease-in-out;
 
   &:hover {
