@@ -25,7 +25,7 @@ const StyledProductCard = styled(Card)`
 
   &:hover {
     transform: scale(1.05);
-    box-shadow: 0 15px 25px ${darkTheme.primaryColor};
+    box-shadow: 0 15px 25px ${darkTheme.primaryColor02};
     background-color: ${darkTheme.backgroundColor02};
   }
 `;
@@ -74,7 +74,7 @@ const SummaryProductCard = (props: SummaryProductCardProps) => {
         }}
       >
         <CardMedia
-          sx={{ height: 250, width: 300 }}
+          sx={{ height: 200, width: 280, mt: 2, borderRadius: 1 }}
           image={srcImage}
           title={altText}
         />

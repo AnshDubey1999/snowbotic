@@ -5,9 +5,10 @@ import styled from "@emotion/styled";
 import { darkTheme } from "../../theme/themes";
 
 const StyledCard = styled(Card)`
-  background-color: ${darkTheme.primaryColor03};
+  background-color: ${darkTheme.primaryColor02};
   margin: 3vh 3vw;
   transition: all 0.3s ease-in-out;
+  color: ${darkTheme.fontColor};
 
   &:hover {
     transform: scale(1.05);
@@ -17,6 +18,7 @@ const StyledCard = styled(Card)`
 
 const StyledTypography = styled(Typography)`
   font-family: "Open Sans";
+  color: ${darkTheme.fontInverseColor};
 `;
 
 const ValueCard = (props: ValueCardProps) => {

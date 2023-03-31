@@ -24,7 +24,7 @@ import Image from "next/image";
 const pages = ["Home", "Products", "Contact", "About us"];
 
 const StyledAppBar = styled(AppBar)`
-  background-color: ${darkTheme.backgroundColor};
+  background-color: transparent;
   box-shadow: none;
 `;
 
@@ -61,25 +61,32 @@ const StyledButton = styled(Button)`
 
 const LoginButton = styled(Button)`
   color: ${darkTheme.primaryColor};
-  font-size: 1vw;
+  font-size: calc(0.75vw + 0.5vh);
   font-weight: 500;
   text-transform: none;
   letter-spacing: 1px;
   transition: all 0.2s ease-in-out;
+  border-color: ${darkTheme.primaryColor};
 
   &:hover {
     background-color: transparent;
+    border-color: ${darkTheme.primaryColor02};
   }
 `;
 
 const GetStartedButton = styled(Button)`
-  color: ${darkTheme.fontColor};
-  background-color: ${darkTheme.primaryColor04};
-  font-size: 1vw;
+  color: ${darkTheme.fontInverseColor};
+  background-color: ${darkTheme.primaryColor};
+  font-size: calccalc(0.75vw + 0.5vh);
   font-weight: 500;
   text-transform: none;
   letter-spacing: 1px;
   transition: all 0.2s ease-in-out;
+  border-color: ${darkTheme.primaryColor};
+  &:hover {
+    background-color: ${darkTheme.primaryColor02};
+    color: ${darkTheme.fontInverseColor};
+  }
 `;
 
 const Header = () => {
@@ -109,35 +116,7 @@ const Header = () => {
     <StyledAppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Image
-            src="/images/logo-snowbots.png"
-            height={75}
-            width={130}
-            alt="Snowbots"
-            style={{
-              marginRight: -20,
-            }}
-          />
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              fontSize: "1.3vw",
-              display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".1rem",
-              color: darkTheme.primaryColor04,
-              textDecoration: "none",
-            }}
-          >
-            SNOWBOTS
-          </Typography>
-
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+          <Box sx={{ flexGrow: 0, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -173,23 +152,17 @@ const Header = () => {
               ))}
             </Menu>
           </Box>
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href=""
-            sx={{
-              mr: 2,
-              display: { xs: "flex", md: "none" },
-              flexGrow: 1,
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            Snowbots
-          </Typography>
+          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+            <Image
+              src="/images/logo-snowbots.png"
+              height={75}
+              width={130}
+              alt="Snowbots"
+              style={{
+                marginRight: -20,
+              }}
+            />
+          </Box>
           <Box
             sx={{
               flexGrow: 9,
