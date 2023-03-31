@@ -9,6 +9,7 @@ import { Values } from "../components/LandingPage/Values";
 
 import { Header } from "../components/LandingPage/Header";
 import { Products } from "../components/LandingPage/Products";
+import { Testimonials } from "../components/LandingPage/Testimonials";
 
 const ImageAndInfoDiv = styled("div")`
   display: flex;
@@ -209,6 +210,7 @@ export default function Home() {
       </main>
       <Values />
       <Products />
+      <Testimonials />
       <footer className={styles.footer}>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"

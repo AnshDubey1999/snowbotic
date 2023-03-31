@@ -1,11 +1,33 @@
 import React from "react";
 import styled from "@emotion/styled";
 import styles from "../../styles/LandingPage/Home.module.css";
+import { testimonials } from "../../shared/constants";
+import { TestimonialCard } from "./TestimonialCard";
+
+const CustomSubtitle = styled("p")`
+  color: #949494;
+`;
+
+const TestimonialCardDiv = styled("div")`
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  justify-content: center;
+  margin-top: 10vh;
+`;
 
 const Testimonials = () => {
   return (
     <div className={styles.testimonialsContainer}>
-      <h1>Our Values</h1>
+      <h1>What Our Testimonials Says</h1>
+      <CustomSubtitle>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </CustomSubtitle>
+      <TestimonialCardDiv>
+        {testimonials.map((testimonial) => (
+          <TestimonialCard {...testimonial} key={testimonial.id} />
+        ))}
+      </TestimonialCardDiv>
     </div>
   );
 };

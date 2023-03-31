@@ -11,3 +11,12 @@ export interface SummaryProductCardProps {
     srcImage: string;
     altText: string;
 }
+
+export interface TestimonialCardProps {
+    id: string;
+    avatarImage: string;
+    altText: string;
+    name: string;
+    description: string;
+    stars: number;
+}
