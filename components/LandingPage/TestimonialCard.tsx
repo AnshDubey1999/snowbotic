@@ -5,7 +5,8 @@ import styled from "@emotion/styled";
 import { darkTheme } from "../../theme/themes";
 
 const StyledCard = styled(Card)`
-  background-color: ${darkTheme.primaryColor};
+  background-color: ${darkTheme.primaryColor02};
+  color: ${darkTheme.fontInverseColor};
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -22,6 +23,7 @@ const StyledCard = styled(Card)`
 const StyledTypography = styled(Typography)`
   font-family: "Open Sans";
   font-weight: 900;
+  color: ${darkTheme.fontInverseColor};
 `;
 
 const TestimonialCard = (props: TestimonialCardProps) => {
