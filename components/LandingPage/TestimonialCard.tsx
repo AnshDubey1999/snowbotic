@@ -28,18 +28,22 @@ const TestimonialCard = (props: TestimonialCardProps) => {
   const { name, description, altText, avatarImage, stars } = props;
 
   return (
-    <StyledCard sx={{ maxWidth: 500 }}>
+    <StyledCard sx={{ maxWidth: 400, maxHeight: 250 }}>
       <Avatar
         alt={altText}
         src={avatarImage}
-        sx={{ my: 1.5, width: 120, height: 120 }}
+        sx={{ my: 1.5, width: 50, height: 50 }}
       />
       <Rating name="read-only" value={stars} readOnly />
       <CardContent>
         <StyledTypography gutterBottom variant="h6">
           {name}
         </StyledTypography>
-        <StyledTypography variant="body2" color="text.secondary">
+        <StyledTypography
+          variant="body2"
+          color="text.secondary"
+          sx={{ fontSize: 12 }}
+        >
           {description}
         </StyledTypography>
       </CardContent>

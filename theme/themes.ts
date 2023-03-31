@@ -1,6 +1,6 @@
 export const darkTheme = {
-    backgroundColor: '#121212',
-    backgroundColor02: '#222222',
+    backgroundColor: '#000000',
+    backgroundColor02: '#121212',
     backgroundColor03: '#3B3BF45',
     backgroundColor04: '#454C32',
     backgroundColor05: '#626262',

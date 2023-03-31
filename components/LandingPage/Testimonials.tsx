@@ -3,9 +3,12 @@ import styled from "@emotion/styled";
 import styles from "../../styles/LandingPage/Home.module.css";
 import { testimonials } from "../../shared/constants";
 import { TestimonialCard } from "./TestimonialCard";
+import Marquee from "react-fast-marquee";
+import { darkTheme } from "../../theme/themes";
 
 const CustomSubtitle = styled("p")`
   color: #949494;
+  margin-bottom: 50px;
 `;
 
 const TestimonialCardDiv = styled("div")`
@@ -23,11 +26,11 @@ const Testimonials = () => {
       <CustomSubtitle>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </CustomSubtitle>
-      <TestimonialCardDiv>
+      <Marquee gradientColor={[18, 18, 18]}>
         {testimonials.map((testimonial) => (
           <TestimonialCard {...testimonial} key={testimonial.id} />
         ))}
-      </TestimonialCardDiv>
+      </Marquee>
     </div>
   );
 };

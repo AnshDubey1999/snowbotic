@@ -25,7 +25,7 @@ const pages = ["Home", "Products", "Contact", "About us"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const StyledAppBar = styled(AppBar)`
-  background-color: ${darkTheme.backgroundColor02};
+  background-color: ${darkTheme.backgroundColor};
   box-shadow: none;
 `;
 

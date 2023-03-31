@@ -65,18 +65,32 @@ const LandingDiv = styled("div")`
   width: 100%;
   display: flex;
   flex: 1;
-  background-color: ${darkTheme.backgroundColor02};
+  background-color: ${darkTheme.backgroundColor};
   justify-content: center;
   text-align: center;
   flex-direction: column;
   align-items: center;
 `;
 
-const LandingHeader = styled("h1")`
+const LandingHeader = styled("p")`
+  font-size: 3rem;
   width: 50vw;
   justify-content: center;
   span {
     color: ${darkTheme.primaryColor04};
+  }
+`;
+
+const ContactUsButton = styled(Button)`
+  color: ${darkTheme.primaryColor};
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 1px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: transparent;
   }
 `;
 
@@ -211,6 +225,16 @@ export default function Home() {
       <Values />
       <Products />
       <Testimonials />
+      <div className={styles.contactUsDiv}>
+        <h1>Excited to get in touch? Come along!</h1>
+        <ContactUsButton
+          variant="outlined"
+          size="large"
+          sx={{ my: 2, display: "block" }}
+        >
+          Contact us
+        </ContactUsButton>
+      </div>
       <footer className={styles.footer}>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
