@@ -3,17 +3,17 @@ import { SummaryProductCardProps, ValueCardProps } from "./types";
 export const ourValues: ValueCardProps[] = [
     {
         id: '1',
-        title: '"Economical"',
+        title: 'Economical',
         description: 'Cost-effective operation Countervail labor shortage.',
     },
     {
         id: '2',
-        title: '"Environmental"',
+        title: 'Environmental',
         description: 'All-electric cleantech Pollution-free operations in the house.',
     },
     {
         id: '3',
-        title: '"Social"',
+        title: 'Social',
         description: 'Safe and snow-free sidewalks Snow shoveler to robot supervisors.',
     }
 ];

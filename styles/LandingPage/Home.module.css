@@ -145,7 +145,17 @@
 
 .productsContainer {
   display: flex;
-  height: 200vh;
+  height: 180vh;
+  width: 100vw;
+  flex: 1;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.testimonialsContainer {
+  display: flex;
+  height: 60vh;
   width: 100vw;
   flex: 1;
   align-items: center;
