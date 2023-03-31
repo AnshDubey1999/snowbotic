@@ -18,7 +18,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 80vh;
+  height: 60vh;
 }
 
 .footer {
@@ -129,4 +129,46 @@
     width: 100%;
     flex-direction: column;
   }
+}
+
+
+/* Values Component */
+.valuesContainer {
+  display: flex;
+  height: 60vh;
+  width: 100vw;
+  flex: 1;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.productsContainer {
+  display: flex;
+  height: 180vh;
+  width: 100vw;
+  flex: 1;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.testimonialsContainer {
+  display: flex;
+  height: 80vh;
+  width: 100vw;
+  flex: 1;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.contactUsDiv {
+  display: flex;
+  height: 30vh;
+  width: 100vw;
+  flex: 1;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
 }

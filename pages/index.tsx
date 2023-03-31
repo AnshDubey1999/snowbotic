@@ -1,11 +1,15 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
-import { Header } from "../components/Header";
+import styles from "../styles/LandingPage/Home.module.css";
 import styled from "@emotion/styled";
 import { darkTheme } from "../theme/themes";
 import { TypeAnimation } from "react-type-animation";
 import { Button } from "@mui/material";
+import { Values } from "../components/LandingPage/Values";
+
+import { Header } from "../components/LandingPage/Header";
+import { Products } from "../components/LandingPage/Products";
+import { Testimonials } from "../components/LandingPage/Testimonials";
 
 const ImageAndInfoDiv = styled("div")`
   display: flex;
@@ -23,7 +27,7 @@ const InfoContainer = styled("div")`
 `;
 
 const StyledParagh = styled("p")`
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 2rem;
   text-align: left;
@@ -61,18 +65,32 @@ const LandingDiv = styled("div")`
   width: 100%;
   display: flex;
   flex: 1;
-  background-color: ${darkTheme.backgroundColor02};
-  justify-content: flex-start;
+  background-color: ${darkTheme.backgroundColor};
+  justify-content: center;
   text-align: center;
   flex-direction: column;
   align-items: center;
 `;
 
-const LandingHeader = styled("h1")`
+const LandingHeader = styled("p")`
+  font-size: 3rem;
   width: 50vw;
   justify-content: center;
   span {
     color: ${darkTheme.primaryColor04};
+  }
+`;
+
+const ContactUsButton = styled(Button)`
+  color: ${darkTheme.primaryColor};
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 1px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: transparent;
   }
 `;
 
@@ -109,15 +127,12 @@ const ExploreProductsButton = styled(Button)`
     opacity: 1;
     background-image: linear-gradient(
       45deg,
-      rgb(255, 0, 0),
-      rgb(255, 115, 0),
-      rgb(255, 251, 0),
-      rgb(72, 255, 0),
-      rgb(0, 255, 213),
-      rgb(0, 43, 255),
-      rgb(122, 0, 255),
-      rgb(255, 0, 200),
-      rgb(255, 0, 0)
+      #ffffff,
+      ${darkTheme.primaryColor},
+      ${darkTheme.primaryColor02},
+      ${darkTheme.primaryColor03},
+      ${darkTheme.primaryColor04},
+      ${darkTheme.primaryColor05}
     );
     animation: coolgradient 10s linear 0s infinite alternate;
     transition: opacity 0.3s ease-in-out 0s;
@@ -166,29 +181,12 @@ export default function Home() {
             <ExploreProductsButton>Explore Products</ExploreProductsButton>
           </ExploreProductsButtonDiv>
         </LandingDiv>
-        <footer className={styles.footer}>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Powered by{" "}
-            <span className={styles.logo}>
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                width={72}
-                height={16}
-              />
-            </span>
-          </a>
-        </footer>
       </div>
       <main className={styles.main}>
         <ImageAndInfoDiv>
           <SnowRobotImage
-            src="/images/snowPlougherBackground.png"
-            height={400}
+            src="/images/products/snowrobot.png"
+            height={220}
             width={400}
             alt="Snow Plougher"
             style={{}}
@@ -218,16 +216,37 @@ export default function Home() {
               solution for clearing snow from driveways, sidewalks, and other
               outdoor areas. Our robot is equipped with powerful brushes and a
               durable snow blower that can quickly and efficiently clear snow,
-              even in the harshest winter conditions. With advanced sensors and
-              smart navigation technology, our robot can navigate around
-              obstacles and map out the most efficient snow clearing route. Say
-              goodbye to backbreaking snow shoveling and let our snow clearing
-              robot do the work for you!
+              even in the harshest winter conditions.
             </StyledParagh>
             <BuyNowButton variant="outlined">Buy now</BuyNowButton>
           </InfoContainer>
         </ImageAndInfoDiv>
       </main>
+      <Values />
+      <Products />
+      <Testimonials />
+      <div className={styles.contactUsDiv}>
+        <h1>Excited to get in touch? Come along!</h1>
+        <ContactUsButton
+          variant="outlined"
+          size="large"
+          sx={{ my: 2, display: "block" }}
+        >
+          Contact us
+        </ContactUsButton>
+      </div>
+      <footer className={styles.footer}>
+        <a
+          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Powered by{" "}
+          <span className={styles.logo}>
+            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+          </span>
+        </a>
+      </footer>
     </div>
   );
 }

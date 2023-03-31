@@ -16,7 +16,7 @@ import {
   MenuItem,
 } from "@mui/material";
 
-import { darkTheme } from "../theme/themes";
+import { darkTheme } from "../../theme/themes";
 
 import styled from "@emotion/styled";
 import Image from "next/image";
@@ -25,7 +25,7 @@ const pages = ["Home", "Products", "Contact", "About us"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const StyledAppBar = styled(AppBar)`
-  background-color: ${darkTheme.backgroundColor02};
+  background-color: ${darkTheme.backgroundColor};
   box-shadow: none;
 `;
 
