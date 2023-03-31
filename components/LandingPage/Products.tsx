@@ -16,6 +16,7 @@ const ProductsDiv = styled("div")`
   width: 100vw;
   justify-content: center;
   margin-top: 10vh;
+  flex-wrap: wrap;
 `;
 
 const Products = () => {
@@ -26,11 +27,11 @@ const Products = () => {
         Built on a foundation of socioeconomic sustainability, Snowbotics
         delivers innovative, all-electric snow removal solutions
       </CustomSubtitle>
-      <Grid container spacing={2}>
+      <ProductsDiv>
         {productsSummary.map((product) => (
           <SummaryProductCard {...product} key={product.id} />
         ))}
-      </Grid>
+      </ProductsDiv>
     </div>
   );
 };

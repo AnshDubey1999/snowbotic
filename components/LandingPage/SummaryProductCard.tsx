@@ -20,7 +20,6 @@ const StyledProductCard = styled(Card)`
   background-color: ${darkTheme.backgroundColor02};
   justify-content: center;
   align-items: center;
-  border-radius: 20px;
   box-shadow: 0 10px 20px ${darkTheme.backgroundColor02};
   transition: all 0.3s ease-in-out;
 
@@ -65,7 +64,15 @@ const SummaryProductCard = (props: SummaryProductCardProps) => {
   const { srcImage, title, description, altText } = props;
   return (
     <StyledGrid item xs={4}>
-      <StyledProductCard sx={{ maxWidth: 300, marginTop: 8 }}>
+      <StyledProductCard
+        sx={{
+          width: "300px",
+          marginTop: "20px",
+          maxWidth: "300px",
+          mx: "50px",
+          my: "30px",
+        }}
+      >
         <CardMedia
           sx={{ height: 250, width: 300 }}
           image={srcImage}

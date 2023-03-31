@@ -14,6 +14,7 @@ const ValueCardDiv = styled("div")`
   width: 100vw;
   justify-content: center;
   margin-top: 10vh;
+  flex-wrap: wrap;
 `;
 
 const Values = () => {
